@@ -1,2 +1,3 @@
-# LinkedIn-Clone
-This project is intended for studying flutter. And decided to clone LinkedIn design
+# linked_in_clone
+
+Cloned Version of LinkedIn using Flutter
