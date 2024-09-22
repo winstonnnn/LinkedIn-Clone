@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:linked_in_clone/ui/main/widgets/main_bottom_nav_bar.dart';
 import 'package:linked_in_clone/ui/screens/home/home_screen.dart';
 import 'package:linked_in_clone/ui/screens/jobs/jobs_screen.dart';
@@ -37,8 +40,22 @@ class _MainAppState extends State<MainApp> {
 
   @override
   Widget build(BuildContext context) {
+    Brightness statusBarBrightness;
+    if(Platform.isAndroid) {
+      statusBarBrightness = Brightness.dark;
+    } else {
+      statusBarBrightness = Brightness.light;
+    }
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: statusBarBrightness,
+      statusBarIconBrightness: statusBarBrightness,
+    ));
+
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.white,
         body: _pages.elementAt(selectedIndex),
         bottomNavigationBar: MainBottomNavBar(
           onItemTapped: _onBottomNavigationItemTapped,

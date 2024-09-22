@@ -26,6 +26,7 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
         highlightColor: Colors.transparent
       ),
       child: BottomNavigationBar(
+        backgroundColor: Colors.white,
         onTap: widget.onItemTapped,
         currentIndex: selectedIndex,
         type: BottomNavigationBarType.fixed,
