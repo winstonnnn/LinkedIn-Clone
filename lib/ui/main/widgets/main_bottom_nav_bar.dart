@@ -18,6 +18,13 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
   final unselectedColor = Colors.black45;
   var selectedIndex = 0;
 
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+      widget.onItemTapped(index);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Theme(
@@ -27,7 +34,7 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
       ),
       child: BottomNavigationBar(
         backgroundColor: Colors.white,
-        onTap: widget.onItemTapped,
+        onTap: onItemTapped,
         currentIndex: selectedIndex,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: selectedColor,
