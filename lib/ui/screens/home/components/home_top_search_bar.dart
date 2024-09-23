@@ -8,7 +8,7 @@ class HomeTopSearchBar extends StatelessWidget {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5)
+        borderRadius: BorderRadius.circular(4)
       ),
       child: const ColoredBox(
         color: Color(0xffedf3f8),
@@ -17,7 +17,7 @@ class HomeTopSearchBar extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(width: 8,),
+              SizedBox(width: 8),
 
               Icon(
                 Icons.search_sharp,

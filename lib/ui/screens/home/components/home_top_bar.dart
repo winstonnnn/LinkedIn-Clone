@@ -9,7 +9,7 @@ class HomeTopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 22, top: 5, right: 18, bottom: 12),
+      padding: const EdgeInsets.only(left: 22, top: 5, right: 18, bottom: 2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

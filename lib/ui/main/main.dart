@@ -40,18 +40,6 @@ class _MainAppState extends State<MainApp> {
 
   @override
   Widget build(BuildContext context) {
-    Brightness statusBarBrightness;
-    if(Platform.isAndroid) {
-      statusBarBrightness = Brightness.dark;
-    } else {
-      statusBarBrightness = Brightness.light;
-    }
-
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarBrightness: statusBarBrightness,
-      statusBarIconBrightness: statusBarBrightness,
-    ));
 
     return MaterialApp(
       home: Scaffold(
