@@ -28,14 +28,19 @@ class HomeFeedItemTop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        HomeFeedItemProfilePicture(),
-        SizedBox(width: 10),
-        HomeFeedItemProfileInfo(),
-        SizedBox(width: 10),
-        HomeFeedItemDynamicButton()
-      ],
+    return const IntrinsicHeight(
+      child: Row(
+        children: [
+          HomeFeedItemProfilePicture(),
+          SizedBox(width: 10),
+          HomeFeedItemProfileInfo(),
+          SizedBox(width: 10),
+          Align(
+            alignment: Alignment.topRight,
+            child: HomeFeedItemDynamicButton(),
+          ),
+        ],
+      ),
     );
   }
 }
